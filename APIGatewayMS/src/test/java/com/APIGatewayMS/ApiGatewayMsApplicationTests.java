@@ -1,10 +1,10 @@
-package com.ZuulMS;
+package com.APIGatewayMS;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ZuulMsApplicationTests {
+class ApiGatewayMsApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -17,36 +17,36 @@ public class StudentControllerImpl implements StudentController {
     private StudentService studentService;
 
     //Get all students data
-    @GetMapping("/students")
+    @GetMapping("/studentms/students")
     public List<Student> getAllStudent() {
         return studentService.getAllStudent();
     }
 
     //Create a new student entry
-    @PostMapping("/student")
+    @PostMapping("/studentms/student")
     public Student createStudent(@RequestBody Student student) {
         return studentService.createStudent(student);
     }
 
     //Get student data by id
-    @GetMapping("/student/{id}")
+    @GetMapping("/studentms/student/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
         return studentService.getStudentById(id);
     }
 
     //Update student data using id as key
-    @PutMapping("/student/{id}")
+    @PutMapping("/studentms/student/{id}")
     public ResponseEntity<Student> updateStudent(@PathVariable Long id, @RequestBody Student studentDetails) {
         return studentService.updateStudent(id,studentDetails);
     }
 
     //Delete student data using id as key
-    @DeleteMapping("/student/{id}")
+    @DeleteMapping("/studentms/student/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteStudent(@PathVariable Long id) {
         return studentService.deleteStudent(id);
     }
 
-    @GetMapping("/hellostudent")
+    @GetMapping("/studentms/hellostudent")
     public String helloStudent() {
         return studentService.helloStudent();
     }
